@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 
 // main() {
 //   stdout.write('Whats your name: ');
@@ -92,4 +92,44 @@ import 'dart:io';
 // }
 
 // Operators//
-void main() {}
+//
+
+//Map
+// void main() {
+//   Map<String, String> planets = {
+//     "first": "mercury",
+//     "second": "earth",
+//     "third": "venus",
+//     "forth": "mars",
+//     "fifth": "jupiter",
+//   };
+//   print(planets.containsValue("venus")); //true
+//   print(planets.remove("third"));
+//   planets["third"] = "nepchune";
+//   print(planets["third"]);
+//   planets["sixth"] = "uranus";
+//   print(planets);
+// }
+
+
+//Method Overriding//
+// class Animal {
+//   void sound() {
+//     print("Animal makes a sound");
+//   }
+// }
+
+// class Dog extends Animal {
+//   @override
+//   void sound() {
+//     super.sound(); // super- Also call to superclass
+//     print("Dog is barking");
+//   }
+// }
+
+// void main() {
+//   Animal myDog = Dog();
+//   myDog.sound();
+// }
+
+
