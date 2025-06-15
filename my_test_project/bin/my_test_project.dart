@@ -111,7 +111,6 @@
 //   print(planets);
 // }
 
-
 //Method Overriding//
 // class Animal {
 //   void sound() {
@@ -132,4 +131,25 @@
 //   myDog.sound();
 // }
 
+// Abstract Method & Class//
+abstract class Animal {
+  void makeSound();
 
+  void move() {
+    print("Animal is moving...");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print("Bark Bark!");
+  }
+}
+
+void main() {
+  //Animal animal =Animal(); // Error - Can't create object directly
+  Dog myDog = Dog();
+  myDog.makeSound(); // Output: Bark Bark!
+  myDog.move(); // Output: Animal is moving...
+}
