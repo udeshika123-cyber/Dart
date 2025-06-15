@@ -132,24 +132,54 @@
 // }
 
 // Abstract Method & Class//
-abstract class Animal {
-  void makeSound();
+// abstract class Animal {
+//   void makeSound();
 
-  void move() {
-    print("Animal is moving...");
-  }
-}
+//   void move() {
+//     print("Animal is moving...");
+//   }
+// }
 
-class Dog extends Animal {
-  @override
-  void makeSound() {
-    print("Bark Bark!");
-  }
-}
+// class Dog extends Animal {
+//   @override
+//   void makeSound() {
+//     print("Bark Bark!");
+//   }
+// }
 
+// void main() {
+//   //Animal animal =Animal(); // Error - Can't create object directly
+//   Dog myDog = Dog();
+//   myDog.makeSound(); // Output: Bark Bark!
+//   myDog.move(); // Output: Animal is moving...
+// }
+
+//Exception handling//
+// void main() {
+//   try {
+//     int x = 20;
+//     int y = 3;
+//     int total = (x ~/ y); //Will cause error
+//     print("Result: ${total}");
+//   } catch (e) {
+//     print("Found error!!!");
+//   } finally {
+//     print("It's normal,Don't care.!");
+//   }
+// }
+
+//Null Safety//
 void main() {
-  //Animal animal =Animal(); // Error - Can't create object directly
-  Dog myDog = Dog();
-  myDog.makeSound(); // Output: Bark Bark!
-  myDog.move(); // Output: Animal is moving...
+  String? name;
+  late String Status;
+  name = null;
+  print("Length: ${name?.length}"); //null
+
+  String fullName = null ?? "kamal";
+  print(
+    "Hello"
+    " ${fullName}",
+  ); //kamal
+  Status = "online";
+  print("Status:${Status}");
 }
