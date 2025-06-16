@@ -111,7 +111,6 @@
 //   print(planets);
 // }
 
-
 //Method Overriding//
 // class Animal {
 //   void sound() {
@@ -132,4 +131,114 @@
 //   myDog.sound();
 // }
 
+// Abstract Method & Class//
+// abstract class Animal {
+//   void makeSound();
 
+//   void move() {
+//     print("Animal is moving...");
+//   }
+// }
+
+// class Dog extends Animal {
+//   @override
+//   void makeSound() {
+//     print("Bark Bark!");
+//   }
+// }
+
+// void main() {
+//   //Animal animal =Animal(); // Error - Can't create object directly
+//   Dog myDog = Dog();
+//   myDog.makeSound(); // Output: Bark Bark!
+//   myDog.move(); // Output: Animal is moving...
+// }
+
+//Exception handling//
+// void main() {
+//   try {
+//     int x = 20;
+//     int y = 3;
+//     int total = (x ~/ y); //Will cause error
+//     print("Result: ${total}");
+//   } catch (e) {
+//     print("Found error!!!");
+//   } finally {
+//     print("It's normal,Don't care.!");
+//   }
+// }
+
+//Null Safety//
+// void main() {
+//   String? name;
+//   late String Status;
+//   name = null;
+//   print("Length: ${name?.length}"); //null
+
+//   String fullName = null ?? "kamal";
+//   print(
+//     "Hello"
+//     " ${fullName}",
+//   ); //kamal
+//   Status = "online";
+//   print("Status:${Status}");
+// }
+
+//Function as parameter//
+// void greet(String name) {
+//   //=>Define function//
+//   print("Hello $name");
+// }
+
+// void customGreet(String name, Function greetFunction) {
+//   greetFunction(name); //=>call Function
+// }
+
+// void main() {
+//   customGreet("udeshi", greet);
+// }
+
+//Anonyms function//
+// void repeat(int times, Function action) {
+//   //Higher order function
+//   for (int i = 0; i < times; i++) {
+//     action(i);
+//   }
+// }
+
+// void main() {
+//   repeat(3, (index) => {print("Hello $index")}); //arrow function
+// }
+
+//Return function//
+// Function welcome(int age) {
+//   return (int number) => number * age;
+// }
+
+// void main() {
+//   var num = welcome(3);
+//   print(num(4));
+// }
+
+//Generics//
+// S greetFunc<S>(List<S> items) {
+//   //T=> Type
+//   return items[0];
+// }
+
+// void main() {
+//   print(greetFunc<String>(["Apple", "Banana"])); // Output: Apple
+//   print(greetFunc<int>([10, 20, 30])); // Output: 10
+// }
+
+//Future + async + await
+// Future<String> fetchUserName() async {
+//   await Future.delayed(Duration(seconds: 2));
+//   return 'udeshi';
+// }
+
+// void main() async {
+//   print("Wating for your name...");
+//   String name = await fetchUserName();
+//   print("Hey...$name!"); //will print after 2 seconds
+// }
