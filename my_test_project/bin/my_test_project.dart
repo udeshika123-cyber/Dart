@@ -169,17 +169,76 @@
 // }
 
 //Null Safety//
-void main() {
-  String? name;
-  late String Status;
-  name = null;
-  print("Length: ${name?.length}"); //null
+// void main() {
+//   String? name;
+//   late String Status;
+//   name = null;
+//   print("Length: ${name?.length}"); //null
 
-  String fullName = null ?? "kamal";
-  print(
-    "Hello"
-    " ${fullName}",
-  ); //kamal
-  Status = "online";
-  print("Status:${Status}");
-}
+//   String fullName = null ?? "kamal";
+//   print(
+//     "Hello"
+//     " ${fullName}",
+//   ); //kamal
+//   Status = "online";
+//   print("Status:${Status}");
+// }
+
+//Function as parameter//
+// void greet(String name) {
+//   //=>Define function//
+//   print("Hello $name");
+// }
+
+// void customGreet(String name, Function greetFunction) {
+//   greetFunction(name); //=>call Function
+// }
+
+// void main() {
+//   customGreet("udeshi", greet);
+// }
+
+//Anonyms function//
+// void repeat(int times, Function action) {
+//   //Higher order function
+//   for (int i = 0; i < times; i++) {
+//     action(i);
+//   }
+// }
+
+// void main() {
+//   repeat(3, (index) => {print("Hello $index")}); //arrow function
+// }
+
+//Return function//
+// Function welcome(int age) {
+//   return (int number) => number * age;
+// }
+
+// void main() {
+//   var num = welcome(3);
+//   print(num(4));
+// }
+
+//Generics//
+// S greetFunc<S>(List<S> items) {
+//   //T=> Type
+//   return items[0];
+// }
+
+// void main() {
+//   print(greetFunc<String>(["Apple", "Banana"])); // Output: Apple
+//   print(greetFunc<int>([10, 20, 30])); // Output: 10
+// }
+
+//Future + async + await
+// Future<String> fetchUserName() async {
+//   await Future.delayed(Duration(seconds: 2));
+//   return 'udeshi';
+// }
+
+// void main() async {
+//   print("Wating for your name...");
+//   String name = await fetchUserName();
+//   print("Hey...$name!"); //will print after 2 seconds
+// }
